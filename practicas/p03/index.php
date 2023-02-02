@@ -159,7 +159,8 @@
 
     <?php
         echo 'a. Version de apache y de php: '.$_SERVER['SERVER_SOFTWARE']."<br>";
-        echo 'b. El nombre del sistema operativo (servidor): '.$_SERVER['SERVER_SOFTWARE'];
+        echo 'b. El nombre del sistema operativo (servidor): '.$_SERVER['HTTP_USER_AGENT']."<br>";
+        echo 'c. El idioma del navegador (cliente): '.$_SERVER['HTTP_ACCEPT_LANGUAGE'];
     ?>
 </body>
 </html>
