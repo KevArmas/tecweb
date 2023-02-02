@@ -150,7 +150,15 @@
         }
         CambioValores();
         echo "<br>El nuevo valor de c: $c y de c: $e";
-        
+    ?>
+
+    <h1>Inciso 7</h1>
+    <p>7. Usando la variable predefinida $_SERVER, determina lo siguiente:</p>
+    <p>a. La versión de Apache y PHP,<br>b. El nombre del sistema operativo (servidor),<br>
+       c. El idioma del navegador (cliente).<br></p>
+
+    <?php
+        echo 'Version de apache y de php: '.$_SERVER['SERVER_SIGNATURE']."<br>";
     ?>
 </body>
 </html>
