@@ -158,7 +158,8 @@
        c. El idioma del navegador (cliente).<br></p>
 
     <?php
-        echo 'Version de apache y de php: '.$_SERVER['SERVER_SIGNATURE']."<br>";
+        echo 'a. Version de apache y de php: '.$_SERVER['SERVER_SOFTWARE']."<br>";
+        echo 'b. El nombre del sistema operativo (servidor): '.$_SERVER['SERVER_SOFTWARE'];
     ?>
 </body>
 </html>
