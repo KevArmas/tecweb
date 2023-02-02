@@ -140,72 +140,17 @@
         $f = ($a XOR $b);
         var_dump($a,$b,$c,$d,$e,$f);
 
-        $a = "0";
-        if(is_bool($a) === true)
-        {
-            echo '$a'." :Es booleano <br>";
-        }
-        
-        
-        if (is_bool($a) === false) {
-            echo '$a'." :No es booleano <br>";
-        }
+        //echo "Este es el valor de c y e $c  $e <br>";
 
-        $b = "TRUE";
-        if(is_bool($b) === true)
+        function CambioValores()
         {
-            echo '$b'." :Es booleano <br>";
+        global $c, $e;
+        $c = "FALSE";
+        $e = "TRUE";
         }
+        CambioValores();
+        echo "<br>El nuevo valor de c: $c y de c: $e";
         
-        
-        if (is_bool($b) === false) {
-            echo '$b'." :No es booleano <br>";
-        }
-
-        $c = FALSE;
-        if(is_bool($c) === true)
-        {
-            echo '$c'." :Es booleano <br>";
-        }
-        
-        
-        if (is_bool($c) === false) {
-            echo '$c'." :No es booleano <br>";
-        }
-
-        $d = ($a OR $b);
-        if(is_bool($d) === true)
-        {
-            echo '$d'." :Es booleano <br>";
-        }
-        
-        
-        if (is_bool($d) === false) {
-            echo '$d'." :No es booleano <br>";
-        }
-
-        $e = ($a AND $c);
-        if(is_bool($e) === true)
-        {
-            echo '$e'." :Es booleano <br>";
-        }
-        
-        
-        if (is_bool($e) === false) {
-            echo '$e'." :No es booleano <br>";
-        }
-
-        $f = ($a XOR $b);
-        if(is_bool($f) === true)
-        {
-            echo '$f'." :Es booleano <br>";
-        }
-        
-        
-        if (is_bool($f) === false) {
-            echo '$f'." :No es booleano <br>";
-        }
-
     ?>
 </body>
 </html>
