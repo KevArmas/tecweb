@@ -63,7 +63,7 @@ a:hover{
 
 .images-text{
     position:absolute;
-    padding-top: ;
+    /*padding-top: ;*/
     margin-top:inherit;
     color: white;
 }
@@ -79,7 +79,7 @@ a:hover{
     padding: 10px;
 }
 
-/////////
+/*/////////*/
 .container {
   position: relative;
   width: 50%;
@@ -258,9 +258,13 @@ h2{
 
 .buton-container {
   text-align: center;
-  position:fixed; 
+  /*position:fixed; 
   width: 100%;
-  padding-right: 50px;
+  height: 40vh;
+  padding-right: 50px;*/
+  width: 300px;
+  height: 570px;
+  margin: auto;
 }
 
 #center{
