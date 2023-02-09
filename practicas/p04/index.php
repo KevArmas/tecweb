@@ -80,7 +80,39 @@
         <p>
             R:
             <?php
-            // AQUÍ VA EL CÓDIGO DE SOLUCIÓN
+            $iterations = 0;
+            $totalNumbers = 0;
+            $matrix = array();
+            
+            if (isset($_GET['multipleOf'])) {
+              $multipleOf = (int)$_GET['multipleOf'];
+            } else {
+              $multipleOf = 5;
+            }
+            
+            do {
+              $iterations++;
+              for ($i = 0; $i < 3; $i++) {
+                $num = rand(1, 100);
+                $matrix[$iterations - 1][$i] = $num;
+                $totalNumbers++;
+                if ($num % $multipleOf == 0) {
+                  break 2;
+                }
+              }
+            } while (true);
+            
+            echo "Number of iterations: " . $iterations . "\n";
+            echo "Total number of generated numbers: " . $totalNumbers . "\n";
+            echo "Matrix:\n";
+            
+            for ($i = 0; $i < $iterations; $i++) {
+              for ($j = 0; $j < 3; $j++) {
+                echo $matrix[$i][$j] . " ";
+              }
+              echo "\n";
+            }
+            
             ?>
         </p>
     </div>
@@ -98,7 +130,16 @@
         <p>
             R:
             <?php
-            // AQUÍ VA EL CÓDIGO DE SOLUCIÓN
+            $letters = array();
+            for ($i = 97; $i <= 122; $i++) {
+              $letters[] = chr($i);
+            }
+            
+            echo '<table border="1">';
+            foreach ($letters as $key => $value) {
+             echo '<tr><td>' . ($key + 97) . " => ".'</td><td>' . $value . '<br>';
+            }
+            echo '</table>';
             ?>
         </p>
     </div>
