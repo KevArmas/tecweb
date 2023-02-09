@@ -23,7 +23,11 @@
             <?php
             if (!empty($_GET['numero'])) {
                 $numero = $_GET['numero'];
-                echo multiplo5y7($numero);
+                if ($numero % 7 == 0 && $numero % 5 == 0) {
+                    echo "$numero es multiplo de 7 y 5.";
+                  } else {
+                    echo "$numero no es multiplo de 7 y 5.";
+                  }
             } else {
                 echo '(vacío)';
             }
