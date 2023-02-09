@@ -44,7 +44,32 @@
         <p>
             R:
             <?php
-            // AQUÍ VA EL CÓDIGO DE SOLUCIÓN
+            $iteraciones = 0;
+            $Numeros = 0;
+            $matriz = array();
+            
+            while (true) {
+              $iteraciones++;
+              for ($i = 0; $i < 3; $i++) {
+                $num = rand(1, 100);
+                $matriz[$iteraciones - 1][$i] = $num;
+                $Numeros++;
+              }
+              if ($matriz[$iteraciones - 1][0] % 2 != 0 && $matriz[$iteraciones - 1][1] % 2 == 0 && $matriz[$iteraciones - 1][2] % 2 != 0) {
+                break;
+              }
+            }
+            
+            echo "Numero de iteraciones: " . $iteraciones . "<br>";
+            echo "Total de numeros generados: " . $Numeros . "<br>";
+            echo "Matriz: <br>";
+            
+            for ($i = 0; $i < $iteraciones; $i++) {
+              for ($j = 0; $j < 3; $j++) {
+                echo $matriz[$i][$j] . " ";
+              }
+              echo "<br>";
+            }
             ?>
         </p>
     </div>
