@@ -107,7 +107,7 @@
               for ($j = 0; $j < 3; $j++) {
                 echo $matrix[$i][$j] . " ";
               }
-              echo "\n";
+              echo "<br>";
             }
             
             ?>
@@ -134,7 +134,7 @@
             
             echo '<table border="1">';
             foreach ($letters as $key => $value) {
-             echo '<tr><td>' . ($key + 97) . " => ".'</td><td>' . $value . '<br>';
+             echo '<tr><td>' . ($key + 97) .'</td><td>' . $value . '<br>';
             }
             echo '</table>';
             ?>
