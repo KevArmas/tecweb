@@ -1,0 +1,65 @@
+<!DOCTYPE html >
+<html>
+
+  <head>
+    <meta charset="utf-8" >
+    <title>Registro de productos</title>
+    <style type="text/css">
+      ol, ul { 
+      list-style-type: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Registro de productos &ldquo;Relojes&rdquo;</h1>
+
+    <p>Inserta el producto nuevo a agregar con sus caracteristicas en el campo correspondiente</p>
+
+    <form id="formularioTenis" action="http://localhost/tecnologiasweb/tecweb/practicas/p06/concurso.php" method="post">
+
+    <h2>Información del producto</h2>
+
+      <fieldset>
+        <legend>Generales</legend>
+
+        <ul>
+          <li><label for="form-name">Nombre de producto:</label> <input type="text" name="name" id="form-name"></li>
+          <li><label for="form-brand">Marca:</label> <input type="text" name="brand" id="form-brand"></li>
+          <li><label for="form-model">Modelo:</label> <input type="text" name="model" id="form-model"></li>
+          <li><label for="form-price">Precio:</label> <input type="number" name="price" id="form-price"></li>
+          <li><label for="form-unit">Unidades:</label> <input type="number" name="unit" id="form-unit"></li>
+          
+          
+        </ul>
+      </fieldset>
+
+      <h2>Detalles:</h2>
+
+      <fieldset>
+        <legend>Inserta mas detalles</legend>
+
+        <fieldset>
+          <legend>Imagen <em>(Inserta una imagen en formato .png o .svg)</em>:</legend>
+          <ul>
+            <li><label for="form-img">Imagen:</label> <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48" name="img" id="form-img"></li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>Características <em>(Detalle las caracteristicas del producto)</em></legend>
+          <ul>
+            <li><label for="form-details">Detalles:</label> <input type="text" name="details" id="form-details"></li>
+          </ul>
+        </fieldset>
+
+      </fieldset>
+
+      <p>
+        <input type="submit" value="Save">
+        <input type="Reset">
+      </p>
+
+    </form>
+  </body>
+</html>
