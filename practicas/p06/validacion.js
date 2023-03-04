@@ -1,11 +1,11 @@
 function validacion() {
-    var name = document.getElementById ("name").value;
-    var brand = document.getElementById ("brand").value;
-    var model = document.getElementById ("model").value;
-    var price = document.getElementById ("price").value;
-    var unit = document.getElementById ("unit").value;
-    var img = document.getElementById ("img").value;
-    var details = document.getElementById ("details").value;
+    var name = document.getElementById ("nombre").value;
+    var brand = document.getElementById ("marca").value;
+    var model = document.getElementById ("modelo").value;
+    var price = document.getElementById ("precio").value;
+    var unit = document.getElementById ("unidades").value;
+    var img = document.getElementById ("imagen").value;
+    var details = document.getElementById ("detalles").value;
 
     if (name === "" || brand === "" || model === "" || price === "" || unit === "" || img === "" || details === "") {
         alert("Campo vacio, por favor verifica que todo este correctamente llenado");
