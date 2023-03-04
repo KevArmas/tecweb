@@ -15,20 +15,20 @@
   <body>
     <h1>Registro de productos</h1>
 
-    <form onsubmit="return validacion()" id="formularioTenis" action="http://localhost/tecnologiasweb/tecweb/practicas/p06/concurso.php" method="post">
+    <form onsubmit="return validacion()" id="formularioTenis" action="http://localhost/tecnologiasweb/tecweb/practicas/p06/set_producto_v2.php" method="post">
 
     <h2>Información del producto</h2>
 
       <fieldset>
 
         <ul>
-          <li><label for="name">Nombre de producto:</label> <input type="text" name="name" id="name"></li>
-          <li><label for="brand">Marca:</label> <input type="text" name="brand" id="brand"></li>
-          <li><label for="model">Modelo:</label> <input type="text" name="model" id="model"></li>
-          <li><label for="price">Precio:</label> <input type="number" name="price" id="price"></li>
-          <li><label for="unit">Unidades:</label> <input type="number" name="unit" id="unit"></li>
-          <li><label for="img">Imagen:</label> <input type="text" name="img" id="img" placeholder="inserta imagen .png o .svg"></li>
-          <li> Detalles: <br><textarea name="details" rows="3" cols="50" id="details" placeholder="No mas de 300 caracteres"></textarea> </li>
+          <li><label for="nombre">Nombre de producto:</label> <input type="text" name="nombre" id="nombre"></li>
+          <li><label for="marca">Marca:</label> <input type="text" name="marca" id="marca"></li>
+          <li><label for="modelo">Modelo:</label> <input type="text" name="modelo" id="modelo"></li>
+          <li><label for="precio">Precio:</label> <input type="number" name="precio" id="precio"></li>
+          <li><label for="unidades">Unidades:</label> <input type="number" name="unidades" id="unidades"></li>
+          <li><label for="imagen">Imagen:</label> <input type="text" name="img" id="imagen" placeholder="inserta imagen .png o .svg"></li>
+          <li> Detalles: <br><textarea name="detalles" rows="3" cols="50" id="detalles" placeholder="No mas de 300 caracteres"></textarea> </li>
           
         </ul>
       </fieldset>
