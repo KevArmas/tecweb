@@ -9,49 +9,29 @@
       list-style-type: none;
       }
     </style>
+    <script src="validacion.js"></script>
   </head>
 
   <body>
-    <h1>Registro de productos &ldquo;Relojes&rdquo;</h1>
+    <h1>Registro de productos</h1>
 
-    <p>Inserta el producto nuevo a agregar con sus caracteristicas en el campo correspondiente</p>
-
-    <form id="formularioTenis" action="http://localhost/tecnologiasweb/tecweb/practicas/p06/concurso.php" method="post">
+    <form onsubmit="return validacion()" id="formularioTenis" action="http://localhost/tecnologiasweb/tecweb/practicas/p06/concurso.php" method="post">
 
     <h2>Información del producto</h2>
 
       <fieldset>
-        <legend>Generales</legend>
 
         <ul>
-          <li><label for="form-name">Nombre de producto:</label> <input type="text" name="name" id="form-name"></li>
-          <li><label for="form-brand">Marca:</label> <input type="text" name="brand" id="form-brand"></li>
-          <li><label for="form-model">Modelo:</label> <input type="text" name="model" id="form-model"></li>
-          <li><label for="form-price">Precio:</label> <input type="number" name="price" id="form-price"></li>
-          <li><label for="form-unit">Unidades:</label> <input type="number" name="unit" id="form-unit"></li>
-          
+          <li><label for="name">Nombre de producto:</label> <input type="text" name="name" id="name"></li>
+          <li><label for="brand">Marca:</label> <input type="text" name="brand" id="brand"></li>
+          <li><label for="model">Modelo:</label> <input type="text" name="model" id="model"></li>
+          <li><label for="price">Precio:</label> <input type="number" name="price" id="price"></li>
+          <li><label for="unit">Unidades:</label> <input type="number" name="unit" id="unit"></li>
+          <li><label for="img">Imagen:</label> <input type="text" name="img" id="img" placeholder="inserta imagen .png o .svg"></li>
+          <li> Detalles: <br><textarea name="details" rows="3" cols="50" id="details" placeholder="No mas de 300 caracteres"></textarea> </li>
           
         </ul>
       </fieldset>
-
-      <h2>Detalles:</h2>
-
-      <fieldset>
-        <legend>Inserta mas detalles</legend>
-
-        <fieldset>
-          <legend>Imagen <em>(Inserta una imagen en formato .png o .svg)</em>:</legend>
-          <ul>
-            <li><label for="form-img">Imagen:</label> <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48" name="img" id="form-img"></li>
-            </ul>
-        </fieldset>
-
-        <fieldset>
-          <legend>Características <em>(Detalle las caracteristicas del producto)</em></legend>
-          <ul>
-            <li><label for="form-details">Detalles:</label> <input type="text" name="details" id="form-details"></li>
-          </ul>
-        </fieldset>
 
       </fieldset>
 
