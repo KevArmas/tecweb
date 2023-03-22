@@ -1,7 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
 <?php
+	$tope = 1;
 
+	if (!empty($tope)) {
 	/** SE CREA EL OBJETO DE CONEXION */
 	@$link = new mysqli('localhost', 'root', '1983270828040110', 'marketzone');
 
@@ -24,7 +26,7 @@
 	}
 
 	$link->close();
-
+	}
 ?>
 
 <head>
@@ -56,14 +58,16 @@
 
 				foreach ($data as $key => $value) {
 					echo '<tr>';
-					echo '<th scope="value"> ' . $value["id"] . ' </th>';
-					echo '<td> ' . $value["nombre"] . '</td>';
-					echo '<td> ' . $value["marca"] . '</td>';
-					echo '<td> ' . $value["modelo"] . '</td>';
-					echo '<td> ' . $value["precio"] . '</td>';
-					echo '<td> ' . $value["unidades"] . '</td>';
-					echo '<td> ' . $value['detalles'] . '</td>';
-					echo '<td><img src=' . $value['imagen'] . ' width="200px" height="200px" /></td>';
+					echo '<tr id=' . $value["id"] . '>';
+					echo '<th scope="row" class="row=data">'. $value["id"] . ' </th>';
+					echo '<td class="row-data"> ' . $value["nombre"] . '</td>';
+					echo '<td class="row-data"> ' . $value["marca"] . '</td>';
+					echo '<td class="row-data"> ' . $value["modelo"] . '</td>';
+					echo '<td class="row-data"> ' . $value["precio"] . '</td>';
+					echo '<td class="row-data"> ' . $value["unidades"] . '</td>';
+					echo '<td class="row-data"> ' . $value['detalles'] . '</td>';
+					echo '<td class="row-data"><img src=' . $value['imagen'] . ' width="200px" height="200px" /></td>';
+					echo '<td><input type="button" value="Editar" onclick="show()" /></td>';
 					echo '</tr>';
 				}
 				?>
