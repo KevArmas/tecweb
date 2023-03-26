@@ -35,7 +35,16 @@ function buscarID(e) {
             // SE VERIFICA SI EL OBJETO JSON TIENE DATOS
             if(Object.keys(productos).length > 0) {
                 // SE CREA UNA LISTA HTML CON LA DESCRIPCIÓN DEL PRODUCTO
-                let descripcion = '';
+                let tam=Object.keys(productos).length;
+                    let descripcion = '';
+                    let template = '';
+                    
+                    for(var i=0; i<tam; i++){
+                        descripcion="";
+                        template="";
+                //let descripcion = '';
+
+
                     descripcion += '<li>precio: '+productos.precio+'</li>';
                     descripcion += '<li>unidades: '+productos.unidades+'</li>';
                     descripcion += '<li>modelo: '+productos.modelo+'</li>';
@@ -54,6 +63,7 @@ function buscarID(e) {
 
                 // SE INSERTA LA PLANTILLA EN EL ELEMENTO CON ID "productos"
                 document.getElementById("productos").innerHTML = template;
+                    }
             }
         }
     };
