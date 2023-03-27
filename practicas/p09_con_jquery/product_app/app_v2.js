@@ -1,8 +1,11 @@
 $(document).ready(function(){
+    let edit = false;
+    $('#product-result').hide();
+    fetchProducts();
 
     $('#search').keyup(function(e) {
+        if($('#search').val()){
         let search = $('#search').val();
-
     
         $.ajax({
             url:'backend/product-search.php',
@@ -17,12 +20,13 @@ $(document).ready(function(){
                     template += `<li>
                         ${producto.nombre}
                         </li>`
-                })
+                });
             }
         })
 
         $('#container').html(template);
         $('#product-result').show();
+
         productos.forEach(producto => {
             template_bus += `
                 <tr productId="${producto.id}">
@@ -44,7 +48,7 @@ $(document).ready(function(){
             `
         });
         $('#products').html(template_bus);
-
+        }
     })
 });
 
@@ -82,7 +86,7 @@ $(document).ready(function(){
                 url:'backend/product-list.php',
                 type: 'GET',
                 success: function (response) {
-                    let products = JSON.parse (response);
+                    let productos = JSON.parse (response);
                     let template = '';
 
                     productos.forEach(producto => {
@@ -110,6 +114,45 @@ $(document).ready(function(){
             });
         }
     
+        $(document).on('click', '.product-delete', function () {
+            if (confirm('¿Deseas eliminar el producto?')) {
+                const element = $(this)[0].parentElement.parentElement;
+                const id = $(element).attr('productID');
+                $.post('backend/product-delete.php', {id}, function (response) {
+                    let respuesta =JSON.parse(response);
+                    console.log(respuesta);
+                    fetchProducts();
+                    let mensaje = respuesta.message;
+                    alert(mensaje);
+                });
+            }
+        });
+
+
+        $(document).on('click', '.product-item', function () {
+            let element = $(this)[0].parentElement.parentElement;
+            let id = $(element).attr('productId');
+            //console.log(id);
+            $.post('backend/product-single.php', { id }, function (response) {
+                const producto = JSON.parse(response);
+                console.log(response);
+                $('#name').val(producto.nombre);
+                $('#product_Id').val(producto.id);
+    
+                var atributosobj = {
+                    "precio": producto.precio,
+                    "unidades": producto.unidades,
+                    "modelo": producto.modelo,
+                    "marca": producto.marca,
+                    "detalles": producto.detalles,
+                    "imagen": producto.imagen
+                };
+    
+                var objstring = JSON.stringify(atributosobj, null, 2);
+                $('#description').val(objstring);
+                edit = true;
+            })
+        });
 //Parte de app no modificiada
 // JSON BASE A MOSTRAR EN FORMULARIO
 var baseJSON = {
@@ -128,8 +171,5 @@ function init() {
      */
     var JsonString = JSON.stringify(baseJSON,null,2);
     document.getElementById("description").value = JsonString;
-
-    // SE LISTAN TODOS LOS PRODUCTOS
-    listarProductos();
 }
 
