@@ -48,36 +48,68 @@ $(document).ready(function(){
     })
 });
 
-$('product-form').submit(function (e) {
-    let datos = JSON.parse($('#description').val());
-    const posData = {
-        nombre: $('#name').val(),
-        precio: datos["precio"],
-        unidades: datos["unidades"],
-        modelo: datos["modelo"],
-        marca: datos["marca"],
-        detalles: datos["detalles"],
-        imagen: datos["imagen"],
-        id: $('#product_Id').val()
-    };
+        $('product-form').submit(function (e) {
+            let datos = JSON.parse($('#description').val());
+            const posData = {
+                nombre: $('#name').val(),
+                precio: datos["precio"],
+                unidades: datos["unidades"],
+                modelo: datos["modelo"],
+                marca: datos["marca"],
+                detalles: datos["detalles"],
+                imagen: datos["imagen"],
+                id: $('#product_Id').val()
+            };
 
-console.log(postData);
+        console.log(postData);
 
-let url = edit === false ? 'backend/product-add.php' : 'backend/product-edit/php';
+        let url = edit === false ? 'backend/product-add.php' : 'backend/product-edit/php';
 
-productoJsonString = Json.stringify(postData, null, 2);
-console.log(productoJsonString);
+        productoJsonString = Json.stringify(postData, null, 2);
+        console.log(productoJsonString);
 
-$.post(url, productoJsonString, function (response) {
-    console.log(response);
-    let res = JSON.parse(response);
-    fetchProducts();
-    let mensaje = res.message;
-});
-e.preventDefault();
-});
+        $.post(url, productoJsonString, function (response) {
+            console.log(response);
+            let res = JSON.parse(response);
+            fetchProducts();
+            let mensaje = res.message;
+        });
+        e.preventDefault();
+        });
 
+        function fetchProducts() {
+            $.ajax( {
+                url:'backend/product-list.php',
+                type: 'GET',
+                success: function (response) {
+                    let products = JSON.parse (response);
+                    let template = '';
 
+                    productos.forEach(producto => {
+                        template += `
+                            <tr productId="${producto.id}">
+                            <td>{$producto.id}</td>
+                            <td>
+                            <a href="#" class="product-item">${producto.nombre}</a>
+                            </td>
+                            <td>${producto.marca}</td>
+                            <td>${producto.modelo}</td>
+                            <td>${producto.precio}</td>
+                            <td>${producto.detalles}</td>
+                            <td>${producto.unidades}</td>
+                            <td>
+                                <button class="product-delete btn btn-danger">
+                                    Eliminar
+                                </button>
+                            </td>
+                            </tr>    
+                            `
+                    });
+                    $('#products').html(template);
+                }
+            });
+        }
+    
 //Parte de app no modificiada
 // JSON BASE A MOSTRAR EN FORMULARIO
 var baseJSON = {
