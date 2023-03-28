@@ -75,7 +75,6 @@
                     console.log(response);
                     let res = JSON.parse(response);
                     fetchProducts();
-                    //$('#product-form').trigger('reset');
                     let mensaje = res.message;
                     alert(mensaje);
                 });
@@ -129,6 +128,32 @@
                 }
             });
 
+        });
+
+        //Editar
+        $(document).on('click', '.product-item', function () {
+            let element = $(this)[0].parentElement.parentElement;
+            let id = $(element).attr('productId');
+            //console.log(id);
+            $.post('backend/product-single.php', { id }, function (response) {
+                const producto = JSON.parse(response);
+                console.log(response);
+                $('#name').val(producto.nombre);
+                $('#product_Id').val(producto.id);
+    
+                var atributosobj = {
+                    "precio": producto.precio,
+                    "unidades": producto.unidades,
+                    "modelo": producto.modelo,
+                    "marca": producto.marca,
+                    "detalles": producto.detalles,
+                    "imagen": producto.imagen
+                };
+    
+                var objstring = JSON.stringify(atributosobj, null, 2);
+                $('#description').val(objstring);
+                edit = true;
+            })
         });
 //Parte de app no modificiada
 // JSON BASE A MOSTRAR EN FORMULARIO
