@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CatalogoVOD>
+    <cuenta>
+        <correo>"bowser33@gmail.com"</correo>
+        <perfiles>
+                <perfil>
+                    <usuario>"Bowser"</usuario>
+                    <idioma>"Español"</idioma>
+                </perfil>
+            
+            <perfil>
+                <usuario>"Mario"</usuario>
+                <idioma>"Ingles"</idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+
+    <Contenido>
+            <peliculas>
+                <genero>
+                    <nombre>"Comedia"</nombre>
+                    <titulo>
+                        <nombre>"Shrek"</nombre>
+                        <duracion>"1 hora 30 minutos "</duracion>
+                    </titulo>
+                    
+                    <titulo>
+                        <nombre>"Jumanji"</nombre>
+                        <duracion>"1 hora 59 minutos "</duracion>
+                    </titulo>
+                    
+                    <titulo>
+                        <nombre>"The unwearable weight of massive talent"</nombre>
+                        <duracion>"1 hora 45 minutos "</duracion>
+                    </titulo>
+                    
+                    <titulo>
+                        <nombre>"Minions"</nombre>
+                        <duracion>"1 hora 30 minutos "</duracion>
+                    </titulo>
+                </genero>
+                
+                <genero>
+                    <nombre>"Ciencia Ficcion"</nombre>
+                    <titulo>
+                        <nombre>"Interestelar"</nombre>
+                        <duracion>"2 horas 49 minutos"</duracion>
+                    </titulo>
+                    
+                    <titulo>
+                        <nombre>"Avatar"</nombre>
+                        <duracion>"3 horas 12 minutos"</duracion>
+                    </titulo>
+                    
+                    <titulo>
+                        <nombre>"Duna"</nombre>
+                        <duracion>"2 horas 35 minutos"</duracion>
+                    </titulo>
+                    
+                    <titulo>
+                        <nombre>"Trascendence"</nombre>
+                        <duracion>"1 hora 59 minutos"</duracion>
+                    </titulo>
+                    
+                </genero>
+            </peliculas>
+        
+            <programas>
+                <genero>
+                    <nombre>"Accion"</nombre>
+                    <titulo>
+                        <nombre>"Flash"</nombre>
+                        <duracion>"41-45 min"</duracion>
+                    </titulo>
+                    
+                    <titulo>
+                        <nombre>"The last of us"</nombre>
+                        <duracion>"43-81 min"</duracion>
+                    </titulo>
+                    
+                    <titulo>
+                        <nombre>"The witcher"</nombre>
+                        <duracion>"47-67 min"</duracion>
+                    </titulo>
+                    
+                    <titulo>
+                        <nombre>"See"</nombre>
+                        <duracion>"15-20 min"</duracion>
+                    </titulo>
+                    
+                    </genero>
+                
+                <genero>
+                    <nombre>"Drama"</nombre>
+                        <titulo>
+                            <nombre>"The queens gambit"</nombre>
+                            <duracion>"46-67 min"</duracion>
+                        </titulo>
+                    
+                         <titulo>
+                             <nombre>"Breaking Bad"</nombre>
+                             <duracion>"45-50 min"</duracion>
+                         </titulo>
+                    
+                    <titulo>
+                        <nombre>"Suits"</nombre>
+                        <duracion>"42 min"</duracion>
+                    </titulo>
+                    
+                    <titulo>
+                        <nombre>"Dark"</nombre>
+                        <duracion>"44-77 min"</duracion>
+                    </titulo>
+                    
+                </genero>
+            </programas>
+    </Contenido>
+</CatalogoVOD>
