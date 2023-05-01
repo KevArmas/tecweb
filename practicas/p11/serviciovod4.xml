@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE CatalogoVOD SYSTEM "serviciovod.dtd">
+<!DOCTYPE CatalogoVOD SYSTEM "serviciovod_ep.dtd">
 <CatalogoVOD>
     <cuenta correo="kevin.armas@alumno.buap.mx">
         <perfiles>
@@ -8,7 +8,7 @@
         </perfiles>
     </cuenta>
     <contenido>
-        <peliculas>
+        <peliculas region="USA">
             <genero nombre="Accion">
                 <titulo duracion="2:27">Emergencia en el aire</titulo>
                 <titulo duracion="2:37">Eternals</titulo>
@@ -18,15 +18,15 @@
                 <titulo duracion="1:29">Misterio a la vista</titulo>
             </genero>
         </peliculas>
-        <programas>
+        <series region="USA">
             <genero nombre="Documentales">
                 <titulo duracion="1 temporada">Indocumentados</titulo>
                 <titulo duracion="1 temporada">Our universe</titulo>
             </genero>
             <genero nombre="Drama">
                 <titulo duracion="5 temporadas">The Good Doctor</titulo>
-                <titulo duracion="6 temporadas"></titulo>
+                <titulo duracion="6 temporadas">Elite</titulo>
             </genero>
-        </programas>
+        </series>
     </contenido>
 </CatalogoVOD>

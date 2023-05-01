@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE CatalogoVOD SYSTEM "serviciovod.dtd">
 <CatalogoVOD>
     <cuenta correo="kevin.armas@alumno.buap.mx">
         <perfiles>
@@ -10,8 +9,8 @@
     <contenido>
         <peliculas>
             <genero nombre="Accion">
-                <titulo duracion="2:27">Emergencia en el aire</titulo>
-                <titulo duracion="2:37">Eternals</titulo>
+                <titulo duracion="2:27"><video id="11">Hola &lt; Emergencia en el aire</video></titulo>
+                <titulo duracion="2:37"><video id="11"><![CDATA[Hola < Eternals]]></video></titulo>
             </genero>
             <genero nombre="Comedia">
                 <titulo duracion="1:04">Gato con botas: el ultimo deseo</titulo>
@@ -25,8 +24,9 @@
             </genero>
             <genero nombre="Drama">
                 <titulo duracion="5 temporadas">The Good Doctor</titulo>
-                <titulo duracion="6 temporadas"></titulo>
+                <titulo duracion="6 temporadas">Elite</titulo>
             </genero>
         </programas>
     </contenido>
 </CatalogoVOD>
+
